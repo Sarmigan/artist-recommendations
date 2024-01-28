@@ -20,21 +20,21 @@ const Page = async ({ params }) => {
         if(data.similarartists.artist.length == 0){
             return (
                 <div className="font-bold flex flex-col items-center m-5 h-screen">
-                    <div className="flex text-4xl text-center mb-96">
-                        <p>SORRY, I COULDNT FIND</p><p className="mx-5 text-6xl text-center">{decodeURI(artist).toUpperCase()}...</p>
+                    <div className="flex text-center flex-col mb-48">
+                        <p>SORRY, I COULDNT FIND</p><p className="mx-5 text-2xl text-center">{decodeURI(artist).toUpperCase()}...</p>
                     </div>
-                    <div className="flex text-xl text-center mb-96">
+                    <div className="flex text-xl text-center">
                         <a className="shadow-[0_9px_0_rgb(0,0,0)] hover:shadow-[0_4px_0px_rgb(0,0,0)] ease-out hover:translate-y-1 transition-all font-bold p-2 border-solid border-2 rounded-lg border-black" href="/">FIND ANOTHER ARTIST!</a>
                     </div>
                 </div>
             )
         } else{
             return (
-                <div className="font-bold flex flex-col items-center justify-center m-5">
-                    <div className="flex text-4xl text-center mb-12">
-                        <p>IF YOU LIKE </p><p className="mx-5 text-6xl text-center">{decodeURI(artist).toUpperCase()}</p><p> YOU MIGHT LIKE...</p>
+                <div className="font-bold flex flex-col items-center m-5 h-full">
+                    <div className="flex text-center flex-col mb-12">
+                        <p>IF YOU LIKE </p><p className="mx-5 text-2xl text-center">{decodeURI(artist).toUpperCase()}</p><p> YOU MIGHT LIKE...</p>
                     </div>
-                    <div className="flex flex-col items-center">
+                    <div className="flex flex-col items-center text-center">
                         {}
                         {data.similarartists.artist.map((info) => {
                         return (
@@ -48,10 +48,10 @@ const Page = async ({ params }) => {
     } else{
         return (
             <div className="font-bold flex flex-col items-center m-5 h-screen">
-                <div className="flex text-4xl text-center mb-96">
-                    <p>SORRY, I COULDNT FIND</p><p className="mx-5 text-6xl text-center">{decodeURI(artist).toUpperCase()}...</p>
+                <div className="flex text-center flex-col mb-48">
+                    <p>SORRY, I COULDNT FIND</p><p className="mx-5 text-2xl text-center">{decodeURI(artist).toUpperCase()}...</p>
                 </div>
-                <div className="flex text-xl text-center mb-96">
+                <div className="flex text-xl text-center">
                     <a className="shadow-[0_9px_0_rgb(0,0,0)] hover:shadow-[0_4px_0px_rgb(0,0,0)] ease-out hover:translate-y-1 transition-all font-bold p-2 border-solid border-2 rounded-lg border-black" href="/">FIND ANOTHER ARTIST!</a>
                 </div>
             </div>
