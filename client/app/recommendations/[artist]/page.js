@@ -38,7 +38,7 @@ const Page = async ({ params }) => {
                         {}
                         {data.similarartists.artist.map((info) => {
                         return (
-                            <a href={`http://127.0.0.1:3000/recommendations/${encodeURI(info.name)}`} className="my-1 hover:scale-125 duration-300" key={info.name}>{info.name}</a>
+                            <a href={`http://${process.env.PUBLIC_IP}}:3000/recommendations/${encodeURI(info.name)}`} className="my-1 hover:scale-125 duration-300" key={info.name}>{info.name}</a>
                         )
                         })}
                     </div>
